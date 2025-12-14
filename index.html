@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusCodes - Visual Programming</title>
+    <!-- Load the Blockly library from Google's CDN -->
+    <script src="https://unpkg.com/blockly@9.0.0/blockly.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Updated the application title -->
+        <h1>NexusCodes</h1>
+        <button id="runButton">▶️ RUN SCRIPT</button>
+    </header>
+
+    <main>
+        <!-- The Blockly workspace container -->
+        <div id="blocklyDiv" class="editor-area"></div>
+        
+        <!-- The Stage/Preview area where the code will execute -->
+        <div id="stageDiv" class="stage-area">
+            <h2>Stage Preview</h2>
+            <!-- We will use a canvas element to draw our sprite and run commands -->
+            <canvas id="spriteCanvas" width="300" height="300"></canvas>
+            <p id="output"></p>
+        </div>
+    </main>
+
+    <!-- Define the toolbox structure (the list of available blocks) -->
+    <xml id="toolbox" style="display: none">
+        <category name="Motion" colour="#4C97FF">
+            <block type="move_steps"></block>
+            <block type="turn_right"></block>
+        </category>
+        <category name="Looks" colour="#9966FF">
+            <block type="say_hello"></block>
+        </category>
+        <category name="Events" colour="#FFD500">
+            <block type="when_flag_clicked"></block>
+        </category>
+    </xml>
+
+    <script src="script.js"></script>
+</body>
+</html>
